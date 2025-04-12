@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <!-- Font Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f7fb;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000; /* Ensures the navbar stays on top */
+    }
+
+    .navbar-nav .nav-link {
+      color: #f1f1f1 !important;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #6c757d !important;
+    }
+
+    footer {
+      background-color: #212529;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #f1f1f1;
+    }
+
+    footer a:hover {
+      color: #6c757d;
+    }
+
+    .text-warning {
+      color: #007bff !important;
+    }
+
+    .nav-item-divider {
+      border-left: 1px solid #6c757d;
+      height: 40px;
+      margin: 0 15px;
+    }
+
+    .contact-form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .contact-form label {
+      font-weight: 500;
+    }
+
+    .contact-form button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .thank-you-message {
+      display: none;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 20px;
+      color: black; 
+    }
+  </style>
+</head>
+<body>
+   <!-- LAYAN LAYAN LAYAN  -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="HomePage.html">
+    <img src="26284.png" alt="Logo" style="width: 40px; height: auto;">
+    Make A Wish
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="HomePage.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="getInvolvedDropdown" role="button" data-bs-toggle="dropdown">
+          Get Involved
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Volunteer Opportunities</a></li>
+          <li><a class="dropdown-item" href="#">Fundraising Events</a></li>
+          <li><a class="dropdown-item" href="#">Partner With Us</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="#">Campaigns</a></li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="donateDropdown" role="button" data-bs-toggle="dropdown">
+          Donate
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">One Time Donation</a></li>
+          <li><a class="dropdown-item" href="#">Monthly Giving</a></li>
+          <li><a class="dropdown-item" href="#">In-Kind Donations</a></li>
+          <li><a class="dropdown-item" href="#">Donation FAQs</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="ContactUsPage.html">Contact Us</a></li>
+
+      <li class="nav-item nav-item-divider"></li>
+      <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Contact Us Section -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <h1>We'd Love to Hear From You</h1>
+      <p>Have any questions, suggestions, or just want to reach out? We're here to help! Please use the form below to send us a message, and our team will get back to you as soon as possible.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Form -->
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="#" method="post" onsubmit="return showThankYouMessage(event)">
+          <!-- Name -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+
+          <!-- Subject -->
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="thank-you-message">
+  <h3>Thank you for reaching out! We will get back to you shortly.</h3>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <!-- Contact  -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+          <p><i class="fas fa-home mr-3"></i> Riyadh, Saudi Arabia</p>
+          <p><i class="fas fa-envelope mr-3"></i> support@makeawish.sa</p>
+          <p><i class="fas fa-phone mr-3"></i> +966 504 104 199</p>
+        </div>
+  
+        <!-- Socials -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Follow Us</h5>
+          <p><a href="#" class="text-white" style="text-decoration: none;"><i class="fab fa-instagram me-2"></i> @MakeAWishSA</a></p>
+          <p><a href="#" class="text-white" style="text-decoration: none;"><i class="fab fa-twitter me-2"></i> @MakeAWishSA</a></p>
+        </div>
+      </div>
+  
+      <!-- Footer  -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-12 text-center">
+          <p>© 2025 Make A Wish | All Rights Reserved</p>
+          <p><a href="#" class="text-white" style="text-decoration: none;">Privacy Policy</a> | <a href="#" class="text-white" style="text-decoration: none;">Terms of Service</a></p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<!--  Thank You message Script -->
+<script>
+  function showThankYouMessage(event) {
+    event.preventDefault(); // Prevent the form from submitting
+    document.querySelector(".contact-form").style.display = "none"; // Hide the form
+    document.querySelector(".thank-you-message").style.display = "block"; // Show the thank you message
+  }
+</script>
+   <!-- LAYAN LAYAN LAYAN END  -->
+</body>
+</html>
