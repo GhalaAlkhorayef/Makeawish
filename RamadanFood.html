@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ramadan Food Baskets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Capriola', sans-serif;
+      background-color: #FDF8E2;
+    }
+    .campaign-image {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .donate-card, .campaign-content, .stat-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .progress-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #A3B565;
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    .preset-btns {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .preset-btns .btn, .btn-success {
+      background-color: #A3B565;
+      border: none;
+      color: #ffffff;
+      width: auto;
+      flex: 1 1 auto;
+      margin: 0 5px;
+    }
+    .preset-btns .btn:hover, .btn-success:hover {
+      background-color: #8CA44E;
+    }
+    h1, h2, h3, h4, h5, h6, p, label {
+      color: #A3B565;
+    }
+    h5 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .navbar {
+      background-color: #FDF8E2;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #A3B565;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #8CA44E;
+    }
+    footer {
+      background-color: #FDF8E2;
+      color: #A3B565;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      margin-top: 40px;
+      padding-top: 30px;
+    }
+    footer a {
+      color: #A3B565;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #8CA44E;
+    }
+    .stat-box i {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #A3B565;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="HomePage.html">
+        <img src="images/logobrand.png" style="max-height: 40px; width: auto; display: inline-block; vertical-align: middle; margin-right: 8px;" alt="Make A Wish Logo">
+        Make A Wish
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="HomePage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="CampaignsPage.html">Campaigns</a></li>
+          <li class="nav-item"><a class="nav-link" href="voulnteer.html">volunteering</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+              <li><a class="dropdown-item" href="ContactUsPage.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+
+    <div class="col-md-5">
+      <div class="donate-card mb-4">
+        <h5>Donation Amount</h5>
+        <div class="preset-btns mb-3">
+          <button class="btn btn-outline-primary" onclick="setAmount(10)">10 SAR</button>
+          <button class="btn btn-outline-primary" onclick="setAmount(50)">50 SAR</button>
+          <button class="btn btn-outline-primary" onclick="setAmount(100)">100 SAR</button>
+        </div>
+        <input type="number" id="amount" class="form-control mb-3" placeholder="Or enter custom amount (SAR)" required>
+        <input type="text" id="name" class="form-control mb-3" placeholder="Your Name" required>
+        <input type="email" id="email" class="form-control mb-3" placeholder="Your Email" required>
+        <input type="text" id="phone" class="form-control mb-3" placeholder="Your Phone Number" required>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="honorCheckbox" onchange="toggleHonorInput()">
+          <label class="form-check-label" for="honorCheckbox">Donate in honor of someone</label>
+        </div>
+        <input type="text" id="honorName" class="form-control mb-3" placeholder="Honoree's Name" style="display: none;">
+        <button class="btn btn-success w-100" onclick="submitDonation()">Donate Now</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="row justify-content-center g-3 mt-4 text-center">
+        <div class="col-6 col-md-4">
+          <div class="stat-box">
+            <i class="fas fa-eye"></i>
+            <div class="fw-bold">18,500</div>
+            <div class="text-muted small">Visitors</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="stat-box">
+            <i class="fas fa-hand-holding-heart"></i>
+            <div class="fw-bold">21,483</div>
+            <div class="text-muted small">Donations</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="stat-box">
+            <i class="fas fa-users"></i>
+            <div class="fw-bold">961</div>
+            <div class="text-muted small">Beneficiaries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-7">
+      <div class="campaign-content">
+        <div class="position-relative mb-3">
+          <img src="Images/ramdan.jpg" class="campaign-image" alt="Ramadan Food Baskets">
+          <span class="progress-label">88%</span>
+          <div class="progress mt-2" style="height: 20px;">
+            <div class="progress-bar bg-success" style="width: 88%;">88%</div>
+          </div>
+        </div>
+        <h3>Ramadan Food Baskets</h3>
+        <p class="text-muted">Campaign ID: RF2025</p>
+        <p>Delivering food baskets to families during the holy month of Ramadan, ensuring everyone has meals to break their fast.</p>
+        <p><strong>Raised:</strong> SAR 22,000 / 25,000</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="pt-5 pb-4 mt-5">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">Contact</h5>
+        <p><i class="fas fa-home"></i> Riyadh, Saudi Arabia</p>
+        <p><i class="fas fa-envelope"></i> support@makeawish.sa</p>
+        <p><i class="fas fa-phone"></i> +966 504 104 199</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">Follow Us</h5>
+        <p><a href="#"><i class="fab fa-instagram me-2"></i>@MakeAWishSA</a></p>
+        <p><a href="#"><i class="fab fa-twitter me-2"></i>@MakeAWishSA</a></p>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <p>© 2025 Make A Wish | All Rights Reserved</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setAmount(value) {
+    document.getElementById('amount').value = value;
+  }
+  function toggleHonorInput() {
+    const honorInput = document.getElementById('honorName');
+    honorInput.style.display = document.getElementById('honorCheckbox').checked ? 'block' : 'none';
+  }
+  function submitDonation() {
+    const donationData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      amount: document.getElementById('amount').value,
+      honor_name: document.getElementById('honorCheckbox').checked ? document.getElementById('honorName').value : null,
+      campaign_title: document.title
+    };
+    if (!donationData.name || !donationData.email || !donationData.amount) {
+      alert("Please fill all required fields!");
+      return;
+    }
+    fetch('/donate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(donationData)
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you for your donation!');
+        location.reload();
+      } else {
+        alert('Failed to submit donation.');
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

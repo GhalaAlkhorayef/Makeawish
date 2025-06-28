@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make A Wish | Home</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #FDF8E2;
+      font-family: 'Capriola', sans-serif;
+    }
+
+    .hero-section {
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+ url('Images/kidsplaying\ .jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 250px 50px 250px 50px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 1000;
+  padding-top: 10px; 
+  padding-bottom: 10px;
+}
+.navbar {
+  transition: background-color 0.4s ease;
+  background-color: transparent;
+}
+
+
+    .hero-section h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .impact-section {
+      background-color: #FDF8E2;
+      padding: 60px 0;
+    }
+    .section-title {
+  color: #A3B565;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+
+
+    .impact-card {
+      background-color: #f1f5e2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.impact-card i {
+  font-size: 30px; 
+
+}
+.impact-card .impact-number {
+  font-size: 28px; 
+  color: #A3B565;
+  margin-bottom: 5px;
+ 
+}
+
+    .recent-donations {
+      background: #ffffff;
+      padding: 40px 0;
+    }
+
+    .recent-donations table {
+      width: 100%;
+    }
+
+    .section-divider {
+      border: none;
+  height: 4px; 
+  background-color: #A3B565; 
+  margin: 20px 0; 
+}
+
+.carousel-container {
+  background-color: #FDF8E2;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.carousel-inner img {
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+#donations-table table {
+  background-color: #f1f5e2;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#donations-table th {
+  background-color: #A3B565;
+  color: white;
+  font-size: 20px;
+}
+
+#donations-table td {
+  font-size: 18px;
+  vertical-align: middle;
+  color: #4c5c2d;
+}
+
+body {
+  font-family: 'Capriola', sans-serif;
+}
+.donations-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #f1f5e2;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.donations-table thead {
+  background-color: #A3B565;
+  color: white;
+}
+.donations-table tbody tr:hover {
+  background-color: #e5eecf;
+}
+
+.donations-table tbody tr:hover {
+  background-color: #e5eccf; 
+  transition: background-color 0.3s ease;
+}
+footer {
+    background-color: #FDF8E2;
+    color: #A3B565;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+
+  footer a {
+    color: #A3B565;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: #8CA44E;
+  }
+  
+
+  .dropdown-menu {    
+    padding: 10px;
+    min-width: 180px;
+    border-radius: 8px;
+    transform: translateX(-20%);
+}
+
+.dropdown-menu a {
+    padding: 8px 16px; 
+    display: block;
+}
+
+  </style>
+</head>
+<body>
+
+
+
+
+
+<section class="hero-section">
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Make A Wish</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="HomePage.html">Home</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="CampaignsPage.html">Campaigns</a></li>
+          <li class="nav-item"><a class="nav-link" href="voulnteer.html">volunteering</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+              <li><a class="dropdown-item" href="ContactUsPage.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 style="color: #f1f5e2;">Make A Wish, Change A Life</h1>
+    <p style="color: #f1f5e2;">Together, we can turn dreams into reality 
+    </p>
+    <a href="CampaignsPage.html" class="btn btn-light m-2">Donate Now</a>
+    <a href="aboutus.html" class="btn btn-outline-light m-2">Learn More</a>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+
+<section class="impact-section text-center">
+  <div class="container">
+    <h2 class="section-title mb-5">Our Impact</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="impact-card p-4 rounded">
+          <i class="fas fa-star fa-2x mb-2" style="color: #A3B565;"></i>
+          <h4 class="impact-number">500+</h4>
+          <p>Wishes Fulfilled</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="impact-card p-4 rounded">
+          <i class="fas fa-hand-holding-heart fa-2x mb-2" style="color: #A3B565;"></i>
+          <h4 class="impact-number">1200+</h4>
+          <p>Families Supported</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="impact-card p-4 rounded">
+          <i class="fas fa-users fa-2x mb-2" style="color: #A3B565;"></i>
+          <h4 class="impact-number">300+</h4>
+          <p>Volunteers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="carousel-section">
+  <div class="carousel-container">
+    <div id="impactCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+          <img src="Images/ch88.webp"  class="d-block mx-auto" alt="Impact 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Education for Every Child</h5>
+            <p>We believe education is the key to breaking the cycle of poverty.</p>
+          </div>
+        </div>
+  
+        <div class="carousel-item">
+          <img src="Images/cleanwater.jpg" class="d-block mx-auto" alt="Impact 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Clean Water Access</h5>
+            <p>Providing safe water sources to empower communities for a better life.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item active">
+          <img src="Images/ch777.jpeg" class="d-block mx-auto" alt="Hope for Every Child">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Hope for Every Child</h5>
+            <p>Together, we create brighter futures for kids around the world.</p>
+          </div>
+        </div>
+  
+
+  
+      </div>
+  
+    
+      <button class="carousel-control-prev" type="button" data-bs-target="#impactCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#impactCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+  
+    </div>
+  </div>
+  
+</section>
+<hr class="section-divider">
+
+
+<section class="recent-donations" style="background-color: #FDF8E2;; padding: 60px 0;">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: #A3B565;">Recent Donations</h2>
+    <div id="donations-table"></div>
+  </div>
+</section>
+
+
+<footer class="pt-5 pb-4 mt-5">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">Contact</h5>
+        <p><i class="fas fa-home"></i> Riyadh, Saudi Arabia</p>
+        <p><i class="fas fa-envelope"></i> support@makeawish.sa</p>
+        <p><i class="fas fa-phone"></i> +966 504 104 199</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">Follow Us</h5>
+        <p><a href="#"><i class="fab fa-instagram me-2"></i>@MakeAWishSA</a></p>
+        <p><a href="#"><i class="fab fa-twitter me-2"></i>@MakeAWishSA</a></p>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <p>© 2025 Make A Wish | All Rights Reserved</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+ <script>
+function LoadRecentDonations() {
+  fetch('/recent-donations')
+    .then(response => response.json())
+    .then(data => {
+      let table = `
+      <div class="donations-container" style="max-width: 700px; margin: 0 auto; background-color: #f1f5e2; padding: 20px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);">
+        <table class="table table-bordered text-center donations-table mb-0" style="background-color: #f1f5e2; border-radius: 15px;">
+          <thead style="background-color: #A3B565; color: white;">
+            <tr>
+              <th>Name</th>
+              <th>Amount (SAR)</th>
+            </tr>
+          </thead>
+          <tbody style="background-color: #f1f5e2;">
+      `;
+
+      data.forEach(donation => {
+        table += `
+          <tr style="background-color: #f1f5e2;">
+            <td>${donation.name}</td>
+            <td>${parseFloat(donation.amount).toFixed(2)}</td>
+          </tr>
+        `;
+      });
+
+      table += `
+          </tbody>
+        </table>
+      </div>
+      `;
+
+      document.getElementById('donations-table').innerHTML = table;
+    })
+    .catch(error => {
+      console.error('Error loading donations:', error);
+    });
+}
+
+LoadRecentDonations();
+setInterval(LoadRecentDonations, 60000);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

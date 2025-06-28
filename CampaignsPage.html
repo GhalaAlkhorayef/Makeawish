@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campaigns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Capriola', sans-serif;
+      background-color: #FDF8E2;
+    }
+    .navbar {
+      background-color: #FDF8E2;
+    }
+    .navbar-brand, .nav-link {
+      color: #A3B565 !important;
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      color: #8CA44E !important;
+    }
+    footer {
+      background-color: #FDF8E2;
+      color: #A3B565;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #A3B565;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #8CA44E;
+    }
+    @keyframes floatEffect {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.campaign-card:hover {
+  animation: floatEffect 2s ease-in-out infinite;
+}
+    .campaign-card img {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    .campaign-card {
+      background-color: #f1f5e2;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .btn-success {
+      background-color: #A3B565;
+      border: none;
+    }
+    .btn-success:hover {
+      background-color: #8CA44E;
+    }
+    .table-primary {
+      background-color: #A3B565;
+      color: #ffffff;
+    }
+    .table-light {
+      background-color: #428817;
+    }
+    .blockquote {
+      color: #6c757d;
+    }
+    section, h2, p {
+      color: #A3B565;
+
+    
+    }
+    .pagination .page-link {
+  color: #A3B565; 
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #A3B565; 
+  border-color: #A3B565; 
+  color: #ffffff; 
+}
+
+.pagination .page-link:hover {
+  background-color: #8CA44E; 
+  border-color: #8CA44E;
+  color: #ffffff;
+}
+
+    .dropdown-menu {    
+    padding: 10px;
+    min-width: 180px;
+    border-radius: 8px;
+    transform: translateX(-20%);
+}
+
+.dropdown-menu a {
+    padding: 8px 16px; 
+    display: block;
+}
+
+
+#backToTopBtn {
+  display: none; 
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #A3B565; 
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#backToTopBtn:hover {
+  background-color: #8CA44E; 
+}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="HomePage.html">
+        <img src="images/logobrand.png" style="max-height: 40px; width: auto; display: inline-block; vertical-align: middle; margin-right: 8px;" alt="Make A Wish Logo">
+        Make A Wish
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="HomePage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="CampaignsPage.html">Campaigns</a></li>
+          <li class="nav-item"><a class="nav-link" href="voulnteer.html">volunteering</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="aboutus.html">About Us</a></li>
+              <li><a class="dropdown-item" href="ContactUsPage.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<!--GH -->
+<!-- ongoing campaigns section -->
+<section class="text-center py-5">
+  <div class="container">
+    <div class="mb-3">
+      <i class="fas fa-hand-holding-heart fa-3x"></i>
+    </div>
+    <h2 class="fw-bold display-5">Ongoing Campaigns</h2>
+    <p class="lead">Your support brings hope to families and communities in need.</p>
+  </div>
+</section>
+
+<div class="container pb-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- cards -->
+       <!-- Card Clean Water -->
+<div class="col">
+    <div class="card campaign-card shadow-sm">
+      <img src="Images/cleanwater.jpg" class="card-img-top" alt="Clean Water">
+      <div class="card-body">
+        <h5 class="card-title">Clean Water Initiative</h5>
+        <p class="card-text">Providing clean water to rural villages across Saudi Arabia.</p>
+        <small class="text-muted d-block mb-1"><strong>Raised:</strong> SAR 13,000 / SAR 20,000</small>
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="w-100 me-2">
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar bg-success" style="width: 65%;">65%</div>
+            </div>
+          </div>
+          <a href="CleanWater.html#donate" class="btn btn-success btn-sm">Donate</a>
+        </div>
+        <hr class="my-2">
+        <a href="CleanWater.html" class="text-muted small text-decoration-none d-block text-center">More details →</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Card Education kit-->
+  <div class="col">
+    <div class="card campaign-card shadow-sm">
+      <img src="Images/education.avif" class="card-img-top" alt="Education Kit">
+      <div class="card-body">
+        <h5 class="card-title">Education Kit Giveaway</h5>
+        <p class="card-text">Supplying school kits to children in need across underfunded communities.</p>
+        <small class="text-muted d-block mb-1"><strong>Raised:</strong> SAR 18,000 / SAR 18,000</small>
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="w-100 me-2">
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar bg-success" style="width: 100%;">100%</div>
+            </div>
+          </div>
+          <a href="EducationKit.html#donate" class="btn btn-success btn-sm">Donate</a>
+        </div>
+        <hr class="my-2">
+        <a href="EducationKit.html" class="text-muted small text-decoration-none d-block text-center">More details →</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="col">
+    <div class="card campaign-card shadow-sm">
+      <img src="Images/ramdan.jpg" class="card-img-top" alt="Ramadan Food">
+      <div class="card-body">
+        <h5 class="card-title">Ramadan Food Baskets</h5>
+        <p class="card-text">Delivering food baskets to families during the holy month of Ramadan.</p>
+        <small class="text-muted d-block mb-1"><strong>Raised:</strong> SAR 22,000 / SAR 25,000</small>
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="w-100 me-2">
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar bg-success" style="width: 88%;">88%</div>
+            </div>
+          </div>
+          <a href="RamadanFood.html#donate" class="btn btn-success btn-sm">Donate</a>
+        </div>
+        <hr class="my-2">
+        <a href="RamadanFood.html" class="text-muted small text-decoration-none d-block text-center">More details →</a>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="col">
+    <div class="card campaign-card shadow-sm">
+      <img src="Images/flood.jpg" class="card-img-top" alt="Flood Aid">
+      <div class="card-body">
+        <h5 class="card-title">Emergency Flood Aid</h5>
+        <p class="card-text">Providing shelter, food, and water to families hit by recent floods.</p>
+        <small class="text-muted d-block mb-1"><strong>Raised:</strong> SAR 9,500 / SAR 15,000</small>
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="w-100 me-2">
+            <div class="progress" style="height: 20px;">
+              <div class="progress-bar bg-success" style="width: 63%;">63%</div>
+            </div>
+          </div>
+          <a href="FloodAid.html#donate" class="btn btn-success btn-sm">Donate</a>
+        </div>
+        <hr class="my-2">
+        <a href="FloodAid.html" class="text-muted small text-decoration-none d-block text-center">More details →</a>
+      </div>
+    </div>
+  </div>
+  
+
+
+  </div>
+  </div>
+
+
+  
+  <hr class="my-5">
+
+
+  <h2 class="text-center mb-4" style="color: #A3B565;">Completed Campaigns</h2>
+
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table text-center rounded-4 overflow-hidden" style="background-color: #FDF8E2; border: none;">
+        <thead style="background-color: #FDF8E2;">
+          <tr style="border-bottom: 2px solid #A3B565;">
+            <th class="py-3 text-start ps-4" style="color: #A3B565;">Campaign</th>
+            <th class="py-3" style="color: #A3B565;">Date</th>
+            <th class="py-3" style="color: #A3B565;">Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #DAD3B0;">
+            <td class="py-3 text-start ps-4 fw-semibold" style="background-color: #f1f5e2; color: #A3B565;">Winter Relief 2024</td>
+            <td class="py-3" style="background-color: #f1f5e2; color: #A3B565;">Jan 2024</td>
+            <td class="py-3" style="background-color: #f1f5e2; color: #A3B565;"> Helped 200+ families stay warm</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #DAD3B0;">
+            <td class="py-3 text-start ps-4 fw-semibold" style="background-color: #f1f5e2; color: #A3B565;">Education Kit Giveaway</td>
+            <td class="py-3" style="background-color: #f1f5e2; color: #A3B565;">Sep 2023</td>
+            <td class="py-3" style="background-color: #f1f5e2; color: #A3B565;">Supplied 500+ students with kits</td>
+          </tr>
+          <tr>
+            <td class="py-3 text-start ps-4 fw-semibold" style="background-color: #f1f5e2; color: #A3B565;">Emergency Flood Aid</td>
+            <td class="py-3" style="background-color: #f1f5e2; color: #A3B565;">May 2023</td>
+            <td class="py-3" style="background-color: #f1f5e2; color: #A3B565;">Supported 300+ flood victims</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+  <nav aria-label="Campaigns page navigation" class="d-flex justify-content-center mt-4">
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+      </li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+     
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <hr class="my-5">
+<h2 class="text-center mb-4">Your Impact in Action</h2>
+<div class="container py-5">
+  <div id="carouselStories" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+    
+      <div class="carousel-item active">
+        <div class="text-center px-4">
+          <blockquote class="blockquote">
+            <p class="fs-5 fst-italic text-secondary">"Your support gave us hope again."</p>
+            <footer class="blockquote-footer text-muted mt-2">A Beneficiary from Jazan</footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="text-center px-4">
+          <blockquote class="blockquote">
+            <p class="fs-5 fst-italic text-secondary">"I never thought I'd see my children go back to school with dignity. Thank you."</p>
+            <footer class="blockquote-footer text-muted mt-2">Mother of 3, Riyadh</footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="text-center px-4">
+          <blockquote class="blockquote">
+            <p class="fs-5 fst-italic text-secondary">"We had nothing left after the flood... until you showed up."</p>
+            <footer class="blockquote-footer text-muted mt-2">Flood Aid Recipient</footer>
+          </blockquote>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Left Arrow -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselStories" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"
+        style="filter: invert(1); background-color: transparent !important;"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <!-- Right Arrow -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselStories" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"
+        style="filter: invert(1); background-color: transparent !important;"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<hr class="my-5">
+<h2 class="text-center mb-2">Submit a Campaign</h2>
+<p class="text-center text-muted mb-4">Have an idea to help? Share your campaign with us.</p>
+
+<div class="container-fluid py-5" style="
+  background-image: url(Images/istockphoto-1996175547-1024x1024.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.8);
+">
+
+  <div class="container bg-white rounded shadow p-4" style="max-width: 1000px;">
+    <div class="row align-items-center">
+      
+    
+      <div class="col-md-6">
+        <form action="/submit_campaign" method="POST">
+          <div class="mb-3">
+            <label for="title" class="form-label fw-semibold">Campaign Title</label>
+            <input type="text" class="form-control rounded" id="title" name="title" placeholder="Ex: Winter Relief">
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label fw-semibold">Description</label>
+            <textarea class="form-control rounded" id="description" name="description" rows="5" placeholder="Describe your campaign..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-success rounded-pill px-4">Submit</button>
+        </form>
+      </div>
+
+  
+      <div class="col-md-6 text-center">
+        <blockquote class="blockquote fst-italic text-muted">
+          "Every great change starts with a small idea. This could be yours."
+        </blockquote>
+        <footer class="blockquote-footer mt-2"> Make A Wish Team</footer>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="pt-5 pb-4 mt-5">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">Contact</h5>
+        <p><i class="fas fa-home"></i> Riyadh, Saudi Arabia</p>
+        <p><i class="fas fa-envelope"></i> support@makeawish.sa</p>
+        <p><i class="fas fa-phone"></i> +966 504 104 199</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="text-uppercase mb-4">Follow Us</h5>
+        <p><a href="#"><i class="fab fa-instagram me-2"></i>@MakeAWishSA</a></p>
+        <p><a href="#"><i class="fab fa-twitter me-2"></i>@MakeAWishSA</a></p>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12">
+        <p>© 2025 Make A Wish | All Rights Reserved</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑</button>
+
+
+<script>
+  
+  var mybutton = document.getElementById("backToTopBtn");
+  
+  
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  };
+  
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
